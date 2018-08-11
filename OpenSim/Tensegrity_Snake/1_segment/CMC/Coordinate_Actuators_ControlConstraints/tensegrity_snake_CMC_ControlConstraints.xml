@@ -14,7 +14,7 @@
 				<max_nodes/>
 				<kp>     100.00000000 </kp>
 				<kv>      20.00000000 </kv>
-    </ControlLinear>
+    		</ControlLinear>
 		</objects>
 		<groups />
 	</ControlSet>
