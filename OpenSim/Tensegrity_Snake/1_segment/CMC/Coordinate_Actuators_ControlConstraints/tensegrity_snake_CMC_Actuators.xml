@@ -16,7 +16,7 @@
 			</CoordinateActuator>
 		</defaults>
 		<objects>
-			<!-- FX means force x-->
+			<!-- translation -->
 			<CoordinateActuator name="bottom_center_reserve">
 				<isDisabled> false </isDisabled>
 				<!--Minimum allowed value for control signal. Used primarily when solving
@@ -26,6 +26,18 @@
 				    for control values-->
 				<max_control> infinity </max_control>
 			<coordinate> rib1_tx </coordinate>
+				<optimal_force>       1.00000000 </optimal_force>
+			</CoordinateActuator>
+			<!-- rotation -->
+			<CoordinateActuator name="bottom_right_reserve">
+				<isDisabled> false </isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving
+				    for control values-->
+				<min_control> -infinity </min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving
+				    for control values-->
+				<max_control> infinity </max_control>
+			<coordinate> rib1_rotation </coordinate>
 				<optimal_force>       1.00000000 </optimal_force>
 			</CoordinateActuator>
 		</objects>

@@ -1,5 +1,6 @@
-snake_rectilinear_motion
+gait2354 is a good model to reference: CMC, point actuators, coordinate actuators, and ConditionalPathPoint for muscles.
 
-As of now, rib1 moves forward; however, the model falls through the floor. Will resolve soon.
+Coordinate Actuators: works
+Point Actuators: works
 
-Tracking and control seem to prevent body pieces from falling through
+Contact Forces: left and right spheres overpower center sphere
