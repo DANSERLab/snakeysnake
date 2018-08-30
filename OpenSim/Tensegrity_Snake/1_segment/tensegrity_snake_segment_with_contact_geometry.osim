@@ -574,117 +574,59 @@
 			<objects />
 			<groups />
 		</ConstraintSet>
+		<!--ContactGeometries  in the model.-->
+		<ContactGeometrySet>
+			<objects>
+				<!-- ground ContactGeometry -->
+				<ContactHalfSpace name="plane_geo"> 
+					<body_name>ground</body_name> 
+					<location>0 0 0</location> 
+					<orientation>0 0 -1.57080000 </orientation> 
+				</ContactHalfSpace>
+				<!-- rib0 ContactGeometries -->
+				<ContactSphere name="rib0_bottom_center_geo"> 
+					<body_name> rib0 </body_name> 
+					<location>0 0 0</location> 
+					<orientation>0 0 0</orientation> 
+					<radius>0.001</radius> 
+				</ContactSphere>
+				<ContactSphere name="rib0_bottom_left_geo"> 
+					<body_name> rib0 </body_name> 
+					<location>0 0 0.020</location> 
+					<orientation>0 0 0</orientation> 
+					<radius>0.001</radius> 
+				</ContactSphere>
+				<ContactSphere name="rib0_bottom_right_geo"> 
+					<body_name> rib0 </body_name> 
+					<location>0.020 0 0</location> 
+					<orientation>0 0 0</orientation> 
+					<radius>0.001</radius> 
+				</ContactSphere>
+				<!-- rib1 ContactGeometries -->
+				<ContactSphere name="rib1_bottom_center_geo"> 
+					<body_name> rib1 </body_name> 
+					<location>0 0 0</location> 
+					<orientation>0 0 0</orientation> 
+					<radius>0.001</radius> 
+				</ContactSphere>
+				<ContactSphere name="rib1_bottom_left_geo"> 
+					<body_name> rib1 </body_name> 
+					<location>0 0 0.020</location> 
+					<orientation>0 0 0</orientation> 
+					<radius>0.001</radius> 
+				</ContactSphere>
+				<ContactSphere name="rib1_bottom_right_geo"> 
+					<body_name> rib1 </body_name> 
+					<location>0.020 0 0</location> 
+					<orientation>0 0 0</orientation> 
+					<radius>0.001</radius> 
+				</ContactSphere>
+			</objects>
+			<groups />
+		</ContactGeometrySet>
 		<!--Forces in the model.-->
 		<ForceSet>
 			<objects> 
-				<!-- Contact force properties for the rib0_bottom_center-plane pair. -->
-				<HuntCrossleyForce name="rib0_bottom_center_plane">
-					<isDisabled> false </isDisabled>
-					<HuntCrossleyForce::ContactParametersSet name="">
-						<objects>
-							<HuntCrossleyForce::ContactParameters name="">
-								<geometry> rib0_bottom_center_geo plane_geo </geometry>
-								<stiffness> 10000000.00000000 </stiffness>
-								<dissipation> 0.00000000 </dissipation>
-								<static_friction> 0.00000000 </static_friction>
-								<dynamic_friction> 0.00000000 </dynamic_friction>
-								<viscous_friction> 0.00000000 </viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups/>
-					</HuntCrossleyForce::ContactParametersSet>
-					<transition_velocity> 0.00000000 </transition_velocity>
-				</HuntCrossleyForce>
-				<!-- Contact force properties for the rib0_bottom_left-plane pair. -->
-				<HuntCrossleyForce name="rib0_bottom_left_plane">
-					<isDisabled> false </isDisabled>
-					<HuntCrossleyForce::ContactParametersSet name="">
-						<objects>
-							<HuntCrossleyForce::ContactParameters name="">
-								<geometry> rib0_bottom_left_geo plane_geo </geometry>
-								<stiffness> 10000000.00000000 </stiffness>
-								<dissipation> 0.00000000 </dissipation>
-								<static_friction> 0.00000000 </static_friction>
-								<dynamic_friction> 0.00000000 </dynamic_friction>
-								<viscous_friction> 0.00000000 </viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups/>
-					</HuntCrossleyForce::ContactParametersSet>
-					<transition_velocity> 0.00000000 </transition_velocity>
-				</HuntCrossleyForce>
-				<!-- Contact force properties for the rib0_bottom_right-plane pair. -->
-				<HuntCrossleyForce name="rib0_bottom_right_plane">
-					<isDisabled> false </isDisabled>
-					<HuntCrossleyForce::ContactParametersSet name="">
-						<objects>
-							<HuntCrossleyForce::ContactParameters name="">
-								<geometry> rib0_bottom_right_geo plane_geo </geometry>
-								<stiffness> 10000000.00000000 </stiffness>
-								<dissipation> 0.00000000 </dissipation>
-								<static_friction> 0.00000000 </static_friction>
-								<dynamic_friction> 0.00000000 </dynamic_friction>
-								<viscous_friction> 0.00000000 </viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups/>
-					</HuntCrossleyForce::ContactParametersSet>
-					<transition_velocity> 0.00000000 </transition_velocity>
-				</HuntCrossleyForce>
-				<!-- Contact force properties for the rib1_bottom_center-plane pair. -->
-				<HuntCrossleyForce name="rib1_bottom_center_plane">
-					<isDisabled> false </isDisabled>
-					<HuntCrossleyForce::ContactParametersSet name="">
-						<objects>
-							<HuntCrossleyForce::ContactParameters name="">
-								<geometry> rib1_bottom_center_geo plane_geo </geometry>
-								<stiffness> 10000000.00000000 </stiffness>
-								<dissipation> 0.00000000 </dissipation>
-								<static_friction> 0.00000000 </static_friction>
-								<dynamic_friction> 0.00000000 </dynamic_friction>
-								<viscous_friction> 0.00000000 </viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups/>
-					</HuntCrossleyForce::ContactParametersSet>
-					<transition_velocity> 0.00000000 </transition_velocity>
-				</HuntCrossleyForce>
-				<!-- Contact force properties for the rib1_bottom_left-plane pair. -->
-				<HuntCrossleyForce name="rib1_bottom_left_plane">
-					<isDisabled> false </isDisabled>
-					<HuntCrossleyForce::ContactParametersSet name="">
-						<objects>
-							<HuntCrossleyForce::ContactParameters name="">
-								<geometry> rib1_bottom_left_geo plane_geo </geometry>
-								<stiffness> 10000000.00000000 </stiffness>
-								<dissipation> 0.00000000 </dissipation>
-								<static_friction> 0.00000000 </static_friction>
-								<dynamic_friction> 0.00000000 </dynamic_friction>
-								<viscous_friction> 0.00000000 </viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups/>
-					</HuntCrossleyForce::ContactParametersSet>
-					<transition_velocity> 0.00000000 </transition_velocity>
-				</HuntCrossleyForce>
-				<!-- Contact force properties for the rib1_bottom_right-plane pair. -->
-				<HuntCrossleyForce name="rib1_bottom_right_plane">
-					<isDisabled> false </isDisabled>
-					<HuntCrossleyForce::ContactParametersSet name="">
-						<objects>
-							<HuntCrossleyForce::ContactParameters name="">
-								<geometry> rib1_bottom_right_geo plane_geo </geometry>
-								<stiffness> 10000000.00000000 </stiffness>
-								<dissipation> 0.00000000 </dissipation>
-								<static_friction> 0.00000000 </static_friction>
-								<dynamic_friction> 0.00000000 </dynamic_friction>
-								<viscous_friction> 0.00000000 </viscous_friction>
-							</HuntCrossleyForce::ContactParameters>
-						</objects>
-						<groups/>
-					</HuntCrossleyForce::ContactParametersSet>
-					<transition_velocity> 0.00000000 </transition_velocity>
-				</HuntCrossleyForce>
 				<Thelen2003Muscle name="rib0_to_rib1_bottom_center_muscle">
 					<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
 					<isDisabled>false</isDisabled>
@@ -1395,64 +1337,129 @@
 					<!--maximum normalized lengthening force-->
 					<Flen>1.8</Flen>
 				</Thelen2003Muscle>
+				<!-- Contact force properties for the rib0_bottom_center-plane pair. -->
+				<HuntCrossleyForce name="rib0_bottom_center_plane">
+					<isDisabled> false </isDisabled>
+					<HuntCrossleyForce::ContactParametersSet name="">
+						<objects>
+							<HuntCrossleyForce::ContactParameters name="">
+								<geometry> rib0_bottom_center_geo plane_geo </geometry>
+								<stiffness> 10000000.00000000 </stiffness>
+								<dissipation> 0.00000000 </dissipation>
+								<static_friction> 0.00000000 </static_friction>
+								<dynamic_friction> 0.00000000 </dynamic_friction>
+								<viscous_friction> 0.00000000 </viscous_friction>
+							</HuntCrossleyForce::ContactParameters>
+						</objects>
+						<groups/>
+					</HuntCrossleyForce::ContactParametersSet>
+					<transition_velocity> 0.00000000 </transition_velocity>
+				</HuntCrossleyForce>
+				<!-- Contact force properties for the rib0_bottom_left-plane pair. -->
+				<HuntCrossleyForce name="rib0_bottom_left_plane">
+					<isDisabled> false </isDisabled>
+					<HuntCrossleyForce::ContactParametersSet name="">
+						<objects>
+							<HuntCrossleyForce::ContactParameters name="">
+								<geometry> rib0_bottom_left_geo plane_geo </geometry>
+								<stiffness> 10000000.00000000 </stiffness>
+								<dissipation> 0.00000000 </dissipation>
+								<static_friction> 0.00000000 </static_friction>
+								<dynamic_friction> 0.00000000 </dynamic_friction>
+								<viscous_friction> 0.00000000 </viscous_friction>
+							</HuntCrossleyForce::ContactParameters>
+						</objects>
+						<groups/>
+					</HuntCrossleyForce::ContactParametersSet>
+					<transition_velocity> 0.00000000 </transition_velocity>
+				</HuntCrossleyForce>
+				<!-- Contact force properties for the rib0_bottom_right-plane pair. -->
+				<HuntCrossleyForce name="rib0_bottom_right_plane">
+					<isDisabled> false </isDisabled>
+					<HuntCrossleyForce::ContactParametersSet name="">
+						<objects>
+							<HuntCrossleyForce::ContactParameters name="">
+								<geometry> rib0_bottom_right_geo plane_geo </geometry>
+								<stiffness> 10000000.00000000 </stiffness>
+								<dissipation> 0.00000000 </dissipation>
+								<static_friction> 0.00000000 </static_friction>
+								<dynamic_friction> 0.00000000 </dynamic_friction>
+								<viscous_friction> 0.00000000 </viscous_friction>
+							</HuntCrossleyForce::ContactParameters>
+						</objects>
+						<groups/>
+					</HuntCrossleyForce::ContactParametersSet>
+					<transition_velocity> 0.00000000 </transition_velocity>
+				</HuntCrossleyForce>
+				<!-- Contact force properties for the rib1_bottom_center-plane pair. -->
+				<HuntCrossleyForce name="rib1_bottom_center_plane">
+					<isDisabled> false </isDisabled>
+					<HuntCrossleyForce::ContactParametersSet name="">
+						<objects>
+							<HuntCrossleyForce::ContactParameters name="">
+								<geometry> rib1_bottom_center_geo plane_geo </geometry>
+								<!-- <stiffness> 10000000.00000000 </stiffness> -->
+								<stiffness> 10000000.00000000 </stiffness>
+								<dissipation> 0.00000000 </dissipation>
+								<static_friction> 0.00000000 </static_friction>
+								<dynamic_friction> 0.00000000 </dynamic_friction>
+								<viscous_friction> 0.00000000 </viscous_friction>
+							</HuntCrossleyForce::ContactParameters>
+						</objects>
+						<groups/>
+					</HuntCrossleyForce::ContactParametersSet>
+					<transition_velocity> 0.00000000 </transition_velocity>
+				</HuntCrossleyForce>
+				<!-- Contact force properties for the rib1_bottom_left-plane pair. -->
+				<HuntCrossleyForce name="rib1_bottom_left_plane">
+					<isDisabled> false </isDisabled>
+					<HuntCrossleyForce::ContactParametersSet name="">
+						<objects>
+							<HuntCrossleyForce::ContactParameters name="">
+								<geometry> rib1_bottom_left_geo plane_geo </geometry>
+								<stiffness> 10000000.00000000 </stiffness>
+								<dissipation> 0.00000000 </dissipation>
+								<static_friction> 0.00000000 </static_friction>
+								<dynamic_friction> 0.00000000 </dynamic_friction>
+								<viscous_friction> 0.00000000 </viscous_friction>
+							</HuntCrossleyForce::ContactParameters>
+						</objects>
+						<groups/>
+					</HuntCrossleyForce::ContactParametersSet>
+					<transition_velocity> 0.00000000 </transition_velocity>
+				</HuntCrossleyForce>
+				<!-- Contact force properties for the rib1_bottom_right-plane pair. -->
+				<HuntCrossleyForce name="rib1_bottom_right_plane">
+					<isDisabled> false </isDisabled>
+					<HuntCrossleyForce::ContactParametersSet name="">
+						<objects>
+							<HuntCrossleyForce::ContactParameters name="">
+								<geometry> rib1_bottom_right_geo plane_geo </geometry>
+								<stiffness> 10000000.00000000 </stiffness>
+								<dissipation> 0.00000000 </dissipation>
+								<static_friction> 0.00000000 </static_friction>
+								<dynamic_friction> 0.00000000 </dynamic_friction>
+								<viscous_friction> 0.00000000 </viscous_friction>
+							</HuntCrossleyForce::ContactParameters>
+						</objects>
+						<groups/>
+					</HuntCrossleyForce::ContactParametersSet>
+					<transition_velocity> 0.00000000 </transition_velocity>
+				</HuntCrossleyForce>
 			</objects>
-			<groups />
+			<!-- <groups /> -->
+			<groups>
+				<ObjectGroup name="rib0_muscles">
+					<members> rib0_to_rib1_bottom_center_muscle rib0_to_rib1_bottom_left_muscle rib0_to_rib1_bottom_right_muscle rib0_to_rib1_bottom_sideways_left_muscle rib0_to_rib1_bottom_sideways_right_muscle rib0_to_rib1_top_center_muscle rib0_to_rib1_top_left_muscle rib0_to_rib1_top_right_muscle rib0_to_rib1_top_sideways_left_muscle rib0_to_rib1_top_sideways_right_muscle
+					</members>
+				</ObjectGroup>
+			</groups>
 		</ForceSet>
 		<!--Markers in the model.-->
 		<MarkerSet>
 			<objects />
 			<groups />
 		</MarkerSet>
-		<!--ContactGeometries  in the model.-->
-		<ContactGeometrySet>
-			<objects>
-				<!-- ground ContactGeometry -->
-				<ContactHalfSpace name="plane_geo"> 
-					<body_name>ground</body_name> 
-					<location>0 0 0</location> 
-					<orientation>0 0 -1.57080000 </orientation> 
-				</ContactHalfSpace>
-				<!-- rib0 ContactGeometries -->
-				<ContactSphere name="rib0_bottom_center_geo"> 
-					<body_name> rib0 </body_name> 
-					<location>0 0 0</location> 
-					<orientation>0 0 0</orientation> 
-					<radius>0.001</radius> 
-				</ContactSphere>
-				<ContactSphere name="rib0_bottom_left_geo"> 
-					<body_name> rib0 </body_name> 
-					<location>0 0 0.020</location> 
-					<orientation>0 0 0</orientation> 
-					<radius>0.001</radius> 
-				</ContactSphere>
-				<ContactSphere name="rib0_bottom_right_geo"> 
-					<body_name> rib0 </body_name> 
-					<location>0.020 0 0</location> 
-					<orientation>0 0 0</orientation> 
-					<radius>0.001</radius> 
-				</ContactSphere>
-				<!-- rib1 ContactGeometries -->
-				<ContactSphere name="rib1_bottom_center_geo"> 
-					<body_name> rib1 </body_name> 
-					<location>0 0 0</location> 
-					<orientation>0 0 0</orientation> 
-					<radius>0.001</radius> 
-				</ContactSphere>
-				<ContactSphere name="rib1_bottom_left_geo"> 
-					<body_name> rib1 </body_name> 
-					<location>0 0 0.020</location> 
-					<orientation>0 0 0</orientation> 
-					<radius>0.001</radius> 
-				</ContactSphere>
-				<ContactSphere name="rib1_bottom_right_geo"> 
-					<body_name> rib1 </body_name> 
-					<location>0.020 0 0</location> 
-					<orientation>0 0 0</orientation> 
-					<radius>0.001</radius> 
-				</ContactSphere>
-			</objects>
-			<groups />
-		</ContactGeometrySet>
 		<!--Controllers in the model.-->
 		<ControllerSet name="Controllers">
 			<objects />

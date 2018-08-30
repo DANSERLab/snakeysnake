@@ -17,7 +17,7 @@
 			</ControlLinear>
 		</defaults>
 		<objects>
-			<ControlLinear name="rib0_to_rib1_bottom_left_muscle.excitation">
+			<ControlLinear name="rib0_to_rib1_left_side_muscle.excitation">
 				<is_model_control> true </is_model_control>
 				<extrapolate> true </extrapolate>
 				<default_min>       0.02000000 </default_min>
@@ -30,7 +30,7 @@
 				<kp>     100.00000000 </kp>
 				<kv>      20.00000000 </kv>
 			</ControlLinear>
-			<ControlLinear name="rib0_to_rib1_bottom_right_muscle.excitation">
+			<ControlLinear name="rib0_to_rib1_right_side_muscle.excitation">
 				<is_model_control> true </is_model_control>
 				<extrapolate> true </extrapolate>
 				<default_min>       0.02000000 </default_min>
