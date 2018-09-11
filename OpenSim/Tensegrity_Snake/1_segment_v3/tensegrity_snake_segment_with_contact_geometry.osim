@@ -1443,8 +1443,27 @@
 			<groups />
 		</ContactGeometrySet>
 		<!--Markers in the model.-->
-		<MarkerSet>
-			<objects />
+		<MarkerSet name="">
+			<objects>
+				<Marker name="rib0_marker">
+					<!-- Body segment in the model on which the marker resides. -->
+					<body> rib0 </body>
+					<!-- location of a marker on the body segment -->
+					<location> 0 0.005 0 </location>
+					<!-- Flag (true or false) specifying whether or not a marker should be kept
+					fixed in the marker placement step.  i.e. If false, the marker is allowed to move-->
+					<fixed> false </fixed>
+				</Marker>
+				<Marker name="rib1_marker">
+					<!-- Body segment in the model on which the marker resides. -->
+					<body> rib1 </body>
+					<!-- location of a marker on the body segment -->
+					<location> 0 0.005 0 </location>
+					<!-- Flag (true or false) specifying whether or not a marker should be kept
+					fixed in the marker placement step.  i.e. If false, the marker is allowed to move-->
+					<fixed> false </fixed>
+				</Marker>
+			</objects>
 			<groups />
 		</MarkerSet>
 		<!--Controllers in the model.-->
