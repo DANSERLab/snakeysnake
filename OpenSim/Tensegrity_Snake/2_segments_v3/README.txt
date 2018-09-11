@@ -1,0 +1,2 @@
+muscle:	optimal_fiber_length
+ligmanet: resting_length
